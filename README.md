@@ -14,7 +14,7 @@
 3. Импортируйте функции:
 
 ```python
-from scripts import * -
+from scripts import *
 ```
 
 ## Использование
