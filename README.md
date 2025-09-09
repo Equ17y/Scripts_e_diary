@@ -12,40 +12,38 @@
 ```
 
 3. Импортируйте функции:
-
-```python
-from scripts import * -
+```
+>>> import scripts
+>>> child = scripts.find_schoolkid('Фролов Иван')
 ```
 
 ## Использование
 
 ### Исправление оценок
 ```python
-fix_marks("Фролов Иван")
+scripts.fix_marks(child)
 ```
 
 ### Удаление замечаний
 ```python
-remove_chastisements("Фролов Иван")
+scripts.remove_chastisements(child)
 ```
 
 ### Создание похвалы
 ```python
-create_commendation("Фролов Иван", "Математика")
-create_commendation("Фролов Иван", "Музыка")
+scripts.create_commendation(child, "Математика")
+scripts.create_commendation(child, "Музыка")
 ```
 
 ## Примеры работы
 
 ```python
 # Для ученика Фролов Иван
-fix_marks("Фролов Иван")
-remove_chastisements("Фролов Иван") 
-create_commendation("Фролов Иван", "Математика")
-
-# Для другого ученика
-fix_marks("Голубев Феофан")
-create_commendation("Голубев Феофан", "Физкультура")
+>>> import scripts
+>>> child = scripts.find_schoolkid('Фролов Иван')
+>>> scripts.fix_marks(child)
+>>> scripts.remove_chastisements(child) 
+>>> scripts.create_commendation(child, "Математика")
 ```
 
 ## Обработка ошибок
